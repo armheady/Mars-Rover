@@ -2,8 +2,7 @@ package org.northcoders;
 
 public class Rover {
     //position
-    int x;
-    int y;
+
     String face;
     String plateau;
     String instructions;
