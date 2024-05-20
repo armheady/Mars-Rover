@@ -9,8 +9,8 @@ class RoverTest {
     public void mainTest(){
         Rover rover =  new Rover("5 5", "1 2 N","LMLMLMLMMLMM");
         rover.move();
-        assertEquals("1 3 N", rover.position);
-        assertEquals("1 3 N", rover.position);
+        assertEquals("0 3 W", rover.position);
+//        assertEquals("1 3 N", rover.position);
     }
 
 }

@@ -7,6 +7,8 @@ public class Rover {
     String plateau;
     String instructions;
     String position;
+    int x;
+    int y;
     int maxY;
     int maxX;
 
@@ -75,7 +77,7 @@ public class Rover {
                         }
                         break;
                     case "E":
-                        if (checkInbound(this.x+1)) {
+                        if (checkInboundX(this.x+1)) {
                             this.x += 1;
                         }
                         break;
@@ -86,22 +88,6 @@ public class Rover {
 
     }
 
-    public boolean checkInbound(int newPosition){
-        boolean check = false;
-        switch (this.face) {
-            case "N", "S":
-                if (newPosition <= maxY && newPosition >= 0) {
-                    check = true;
-                }
-                break;
-            case "W", "E":
-                if (newPosition <= maxX && newPosition >= 0) {
-                    check = true;
-                }
-                break;
-        }
-        return check;
-    }
 
     public boolean checkInboundX(int newX){
         return newX <= this.maxX && newX >= 0;

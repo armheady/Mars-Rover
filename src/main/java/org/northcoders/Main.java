@@ -1,13 +1,12 @@
 package org.northcoders;
 
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+//        System.out.println("Hello world!");
 
 
         Scanner scanner = new Scanner(System.in);
@@ -23,7 +22,7 @@ public class Main {
                 if(
                     !Character.isDigit(plateau.toCharArray()[0]) &&
                     !Character.isDigit(plateau.toCharArray()[2])) {
-                    throw new IllegalArgumentException();
+                    throw new InputMismatchException();
                 } else if (plateau.length() != 3) {
                     throw new InputMismatchException();
                 }
@@ -37,9 +36,7 @@ public class Main {
             catch (InputMismatchException e) {
                 System.out.println("Invalid Input");
             }
-            catch (IllegalArgumentException e ){
-                System.out.print("Bad");
-            }
+
         }
 
         Rover marsRover = new Rover(plateau, position, instructions);
