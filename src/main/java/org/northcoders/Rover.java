@@ -7,6 +7,8 @@ public class Rover {
     String plateau;
     String instructions;
     String position;
+    int x;
+    int y;
     int maxY;
     int maxX;
 
