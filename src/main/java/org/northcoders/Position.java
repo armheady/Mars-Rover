@@ -24,8 +24,8 @@ public class Position {
         return newY <= this.maxY && newY >= 0;
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return String.format("%d %d %s", x ,y,facing);
+    }
 }
