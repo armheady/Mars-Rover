@@ -1,4 +1,4 @@
-package org.northcoders;
+package org.northcoders.Data;
 
 public class Position {
     public int x;

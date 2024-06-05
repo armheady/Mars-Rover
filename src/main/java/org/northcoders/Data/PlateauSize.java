@@ -1,4 +1,4 @@
-package org.northcoders;
+package org.northcoders.Data;
 
 public class PlateauSize {
 

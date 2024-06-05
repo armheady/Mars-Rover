@@ -1,8 +1,8 @@
 package org.northcoders;
 
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import org.northcoders.InputParser.InputParser;
+import org.northcoders.Logic.Rover;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Main {
       InputParser parser = new InputParser();
         parser.run();
 
-      Rover marsRover = new Rover(parser.position, parser.instructions);
+      Rover marsRover = new Rover(parser.getPosition(), parser.getInstructions());
         marsRover.run();
 
 

@@ -1,4 +1,4 @@
-package org.northcoders;
+package org.northcoders.Data;
 
 public enum Instruction {
     L,

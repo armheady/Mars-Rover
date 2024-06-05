@@ -1,4 +1,8 @@
-package org.northcoders;
+package org.northcoders.Logic;
+
+import org.northcoders.Data.CompassDirection;
+import org.northcoders.Data.Instruction;
+import org.northcoders.Data.Position;
 
 public class Rover {
 
