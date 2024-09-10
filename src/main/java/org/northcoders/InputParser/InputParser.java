@@ -50,13 +50,12 @@ public class InputParser {
         boolean validInput = false;
         while(!validInput) {
             System.out.println("Please enter rover starting position (e.g.,'1 2 N'):");
-
             String positionInput = scanner.nextLine();
             try {
                 if (positionInput.length() < 5 ||
-                        !Character.isDigit(positionInput.charAt(0)) ||
-                        !Character.isDigit(positionInput.charAt(2)) ||
-                        !Character.isLetter(positionInput.charAt(4))
+                        !Character.isDigit(positionInput.toCharArray()[0]) ||
+                        !Character.isDigit(positionInput.toCharArray()[2]) ||
+                        !Character.isLetter(positionInput.toCharArray()[4])
                 ) {
                     throw new InputMismatchException("Invalid input format for rover starting position.");
                 }
@@ -78,7 +77,7 @@ public class InputParser {
         Scanner scanner = new Scanner(System.in);
         boolean validInput = false;
         while (!validInput) {
-            System.out.println("Please enter instructions (e.g.,'LMMMRL'):");
+            System.out.println("Please enter instructions (e.g.,'LMMRL'):");
             String instructionsInput = scanner.nextLine();
             try {
                 this.instructions = new Instruction[instructionsInput.length()];
@@ -86,6 +85,7 @@ public class InputParser {
                     this.instructions[i] = Instruction.valueOf(instructionsInput.substring(i, i + 1));
                   validInput = true;
                 }
+                validInput = true;
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid instruction for rover.");
                 System.out.println("Please try again.");
