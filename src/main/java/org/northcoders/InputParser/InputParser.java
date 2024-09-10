@@ -84,6 +84,7 @@ public class InputParser {
                 this.instructions = new Instruction[instructionsInput.length()];
                 for (int i = 0; i < instructionsInput.length(); i++) {
                     this.instructions[i] = Instruction.valueOf(instructionsInput.substring(i, i + 1));
+                  validInput = true;
                 }
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid instruction for rover.");
