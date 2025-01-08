@@ -3,9 +3,9 @@
 # Mars Rover
 
 ## Description
-The Mars Rover project simulates the exploration of the surface of Mars by rovers.
-The surface of Mars is represented by a Plateau. You can assume that the Plateau is a square/rectangular grid for the purpose of this task.
-Rovers navigate the Plateau by following a sequence of commands.
+The Mars Rover project simulates the exploration of the surface of Mars by rovers. 
+The surface is represented by a Plateau which is divided into a grid. 
+Rovers navigate the Plateau by following sequences of commands to move.
 
 ## The Plateau
 The Plateau is divided into a grid.
@@ -59,8 +59,11 @@ The expected output is:
 1 3 N
 ```
 
-## Installation
-To run this project, you will need to have Java installed on your machine.
+Requirements
+
+    Maven: Ensure Maven is installed and configured.
+    Java: Java 21 is required.
+
 
 ### Using IntelliJ IDEA
 1. Clone the repository:
